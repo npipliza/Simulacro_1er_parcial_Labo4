@@ -1,0 +1,38 @@
+<main>
+  <div class="fondoWeb">
+    <div class="container py-4 cartelera">
+      <a class=" text-warning text-decoration-none">
+        <span style="font-size: 85px;"><img class="mb-4" width="65" height="65" src="./favicon.ico"/> CARTELERA <img class="mb-4" width="65" height="65" src="./favicon.ico"/></span>
+      </a> 
+
+    <div class="p-5 mt-3 mb-3 rounded-5">
+      <div class="text-center">
+        <app-tabla-pelicula [listadoRecibido]="listadoPeliculas"(EnviarUnaPelicula)="VerPeliculaSeleccionada($event)"></app-tabla-pelicula>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="btn btn-outline-warning h-100 border rounded-5 cartel" (click)="altaPelicula()">
+          <h2><br><br><br>ALTA PELÍCULA</h2>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="h-100 p-5 border rounded-5 text-white cartel">
+          <h2>DETALLE PELÍCULA</h2>
+          <app-detalle-pelicula [peliculaSeleccionada]="peliculaActiva"></app-detalle-pelicula>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="btn btn-outline-warning h-100 border rounded-5 cartel" (click)="borrarPelicula()">
+          <h2><br><br><br>BORRAR PELÍCULA</h2>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-muted border-top">&copy; Nadia Pipliza - Precuela 1er parcial</footer>
+    </div>
+  </div>
+</main>

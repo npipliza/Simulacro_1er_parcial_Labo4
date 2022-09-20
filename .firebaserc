@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "parciall4": {
+      "hosting": {
+        "preParcial": [
+          "parciall4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "parciall4"
+  }
+}
